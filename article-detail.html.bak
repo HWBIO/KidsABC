@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KidsABC - 文章详情</title>
+    <meta name="description" content="KidsABC 儿童英语阅读学习平台">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="article-header">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1 class="header-title">文章详情</h1>
+    </header>
+
+    <!-- Sub Navigation -->
+    <div class="sub-nav">
+        <a href="#" class="sub-nav-item active" data-target="read">读文章</a>
+        <a href="#" class="sub-nav-item" data-target="quiz">答题目</a>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="content-container" id="article-detail-container">
+        <!-- Read Article Section -->
+        <div class="content-section active" id="read-section">
+            <div class="article-banner">
+                <img src="https://placehold.co/800x400/FF8A65/FFF?text=The+Little+Red+Hen" alt="Article Banner">
+                <h2 class="article-overlay-title">The Little Red Hen's Adventure</h2>
+            </div>
+            <div class="article-content english-content active">
+                <p>Once upon a time, there was a little red hen who lived on a farm. She was friends with a lazy dog, a sleepy cat, and a noisy yellow duck.</p>
+                
+                <p>One day, the little red hen found some wheat seeds on the ground. She had an idea. She would plant the wheat, and when it grew, she would make bread with it.</p>
+                
+                <p>"Who will help me plant these wheat seeds?" asked the little red hen.</p>
+                
+                <p>"Not I," said the dog.</p>
+                
+                <p>"Not I," said the cat.</p>
+                
+                <p>"Not I," said the duck.</p>
+                
+                <p>"Then I will plant them myself," said the little red hen. And she did.</p>
+                
+                <p>When the wheat had grown, the little red hen asked, "Who will help me cut the wheat?"</p>
+                
+                <p>"Not I," said the dog.</p>
+                
+                <p>"Not I," said the cat.</p>
+                
+                <p>"Not I," said the duck.</p>
+                
+                <p>"Then I will cut it myself," said the little red hen. And she did.</p>
+            </div>
+            
+            <div class="article-content chinese-content">
+                <p>从前，有一只住在农场里的小红母鸡。她的朋友是一只懒狗、一只爱睡觉的猫和一只吵闹的黄鸭子。</p>
+                
+                <p>有一天，小红母鸡在地上发现了一些小麦种子。她有了一个主意。她要种下这些小麦，等小麦长大后，她要用它来做面包。</p>
+                
+                <p>"谁来帮我种这些小麦种子？"小红母鸡问道。</p>
+                
+                <p>"不是我，"狗说。</p>
+                
+                <p>"不是我，"猫说。</p>
+                
+                <p>"不是我，"鸭子说。</p>
+                
+                <p>"那我自己来种，"小红母鸡说。于是她自己种下了种子。</p>
+                
+                <p>当小麦长大后，小红母鸡问："谁来帮我割小麦？"</p>
+                
+                <p>"不是我，"狗说。</p>
+                
+                <p>"不是我，"猫说。</p>
+                
+                <p>"不是我，"鸭子说。</p>
+                
+                <p>"那我自己来割，"小红母鸡说。于是她自己割了小麦。</p>
+            </div>
+            <!-- Article Statistics -->
+            <div class="article-stats">
+                <h3>文章统计</h3>
+                <table class="stats-table">
+                    <tr>
+                        <td>字数统计</td>
+                        <td>180</td>
+                    </tr>
+                    <tr>
+                        <td>句数统计</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>句子平均长度</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>ATOS level</td>
+                        <td>2.5</td>
+                    </tr>
+                    <tr>
+                        <td>蓝思值</td>
+                        <td>480L</td>
+                    </tr>
+                    <tr>
+                        <td>建议人群</td>
+                        <td>小学低年级</td>
+                    </tr>
+                    <tr>
+                        <td>建议阅读时长</td>
+                        <td>3分钟</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Article Action Buttons -->
+            <div class="article-actions">
+                <div class="action-button check-in-button" id="checkInButton">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>打卡</span>
+                </div>
+                <div class="action-button favorite-button" id="favoriteButton">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="action-button share-button" id="shareButton">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="content-section" id="quiz-section">
+            <div class="quiz-container">
+                <h3 class="section-title">Reading Comprehension Quiz</h3>
+                
+                <!-- 问题1 -->
+                <div class="quiz-question" data-question="1">
+                    <h4 class="question-title">Question 1: Who found the wheat seeds?</h4>
+                    <div class="answer-options">
+                        <div class="answer-option" data-correct>
+                            <div class="option-marker">A</div>
+                            <div class="option-text">The little red hen</div>
+                        </div>
+                        <div class="answer-option">
+                            <div class="option-marker">B</div>
+                            <div class="option-text">The lazy dog</div>
+                        </div>
+                        <div class="answer-option">
+                            <div class="option-marker">C</div>
+                            <div class="option-text">The sleepy cat</div>
+                        </div>
+                        <div class="answer-option">
+                            <div class="option-marker">D</div>
+                            <div class="option-text">The noisy yellow duck</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 问题2 -->
+                <div class="quiz-question" data-question="2" style="display: none;">
+                    <h4 class="question-title">Question 2: What did the little red hen want to make with the wheat?</h4>
+                    <div class="answer-options">
+                        <div class="answer-option">
+                            <div class="option-marker">A</div>
+                            <div class="option-text">Cake</div>
+                        </div>
+                        <div class="answer-option" data-correct>
+                            <div class="option-marker">B</div>
+                            <div class="option-text">Bread</div>
+                        </div>
+                        <div class="answer-option">
+                            <div class="option-marker">C</div>
+                            <div class="option-text">Cookies</div>
+                        </div>
+                        <div class="answer-option">
+                            <div class="option-marker">D</div>
+                            <div class="option-text">Soup</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 问题3 -->
+                <div class="quiz-question" data-question="3" style="display: none;">
+                    <h4 class="question-title">Question 3: What did the other animals say when asked to help?</h4>
+                    <div class="answer-options">
+                        <div class="answer-option">
+                            <div class="option-marker">A</div>
+                            <div class="option-text">Yes, I will!</div>
+                        </div>
+                        <div class="answer-option">
+                            <div class="option-marker">B</div>
+                            <div class="option-text">Maybe later.</div>
+                        </div>
+                        <div class="answer-option" data-correct>
+                            <div class="option-marker">C</div>
+                            <div class="option-text">Not I.</div>
+                        </div>
+                        <div class="answer-option">
+                            <div class="option-marker">D</div>
+                            <div class="option-text">I'm sorry, I can't.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Bar for Article Reading -->
+    <div class="global-bar" id="readingControls">
+        <!-- 播放进度条 -->
+        <div class="progress-bar-container">
+            <div class="progress-time current-time">0:00</div>
+            <div class="progress-bar">
+                <div class="progress-track"></div>
+                <div class="progress-fill"></div>
+                <div class="progress-handle"></div>
+            </div>
+            <div class="progress-time total-time">0:00</div>
+        </div>
+        <div class="control-item language-toggle">
+            <i class="fas fa-language"></i>
+            <span>英/中</span>
+        </div>
+        <div class="control-item backward">
+            <i class="fas fa-backward-step"></i>
+            <span>-15秒</span>
+        </div>
+        <div class="control-item play-pause">
+            <i class="fas fa-play"></i>
+            <span>播放</span>
+        </div>
+        <div class="control-item forward">
+            <i class="fas fa-forward-step"></i>
+            <span>+15秒</span>
+        </div>
+        <div class="control-item speed-control">
+            <i class="fas fa-gauge-high"></i>
+            <span>1.0x</span>
+            <div class="speed-options">
+                <div class="speed-option" data-speed="0.5">0.5x</div>
+                <div class="speed-option" data-speed="0.75">0.75x</div>
+                <div class="speed-option active" data-speed="1.0">1.0x</div>
+                <div class="speed-option" data-speed="1.25">1.25x</div>
+                <div class="speed-option" data-speed="1.5">1.5x</div>
+                <div class="speed-option" data-speed="2.0">2.0x</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Bar for Quiz -->
+    <div class="global-bar quiz-controls" id="quizControls">
+        <div class="bar-left">
+            <span class="current-question-indicator">
+                问题 <span class="current-number"></span> / <span class="total-number"></span>
+            </span>
+        </div>
+        <div class="bar-center">
+            <button class="next-question-btn">下一题</button>
+        </div>
+        <div class="bar-right">
+            <!-- 空白占位 -->
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KidsABC - 儿童英语阅读</title>
+    <meta name="description" content="KidsABC 儿童英语阅读学习平台">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="article-header">
+        <h1 class="header-title">少年ABC</h1>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="content-container" id="article-list-container">
+        <!-- Date Filter Section -->
+        <div class="date-filter-container">
+            <div class="date-filter-scroll">
+                <div class="date-item" data-date="2025-02-24">
+                    <div class="date-day">24</div>
+                    <div class="date-month">2月</div>
+                </div>
+                <div class="date-item" data-date="2025-02-25">
+                    <div class="date-day">25</div>
+                    <div class="date-month">2月</div>
+                </div>
+                <div class="date-item" data-date="2025-02-26">
+                    <div class="date-day">26</div>
+                    <div class="date-month">2月</div>
+                </div>
+                <div class="date-item" data-date="2025-02-27">
+                    <div class="date-day">27</div>
+                    <div class="date-month">2月</div>
+                </div>
+                <div class="date-item" data-date="2025-02-28">
+                    <div class="date-day">28</div>
+                    <div class="date-month">2月</div>
+                </div>
+                <div class="date-item" data-date="2025-02-29">
+                    <div class="date-day">29</div>
+                    <div class="date-month">2月</div>
+                </div>
+                <div class="date-item" data-date="2025-03-01">
+                    <div class="date-day">1</div>
+                    <div class="date-month">3月</div>
+                </div>
+                <div class="date-item" data-date="2025-03-02">
+                    <div class="date-day">2</div>
+                    <div class="date-month">3月</div>
+                </div>
+                <div class="date-item" data-date="2025-03-03">
+                    <div class="date-day">3</div>
+                    <div class="date-month">3月</div>
+                </div>
+                <div class="date-item" data-date="2025-03-04">
+                    <div class="date-day">4</div>
+                    <div class="date-month">3月</div>
+                </div>
+                <div class="date-item active-date" data-date="2025-03-05">
+                    <div class="date-day">5</div>
+                    <div class="date-month">3月</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Article List Section -->
+        <div class="article-list">
+            <!-- Article Item -->
+            <div class="article-card" data-article-id="1">
+                <div class="article-banner">
+                    <img src="images/images0001.jpg" alt="Dinosaurs Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">The Little Red Hen's Adventure</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月5日</span>
+                        <span class="article-source">ABC News</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">故事</span>
+                        <span class="tag">动物</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Item -->
+            <div class="article-card" data-article-id="2">
+                <div class="article-banner">
+                    <img src="images/images0002.jpg" alt="Article 2 Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">The Solar System Adventure</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月5日</span>
+                        <span class="article-source">Science Kids</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">科学</span>
+                        <span class="tag">太空</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advertisement Banner -->
+            <div class="ad-banner">
+                <img src="https://placehold.co/600x200/FFD54F/333?text=Advertisement" alt="Advertisement">
+            </div>
+
+            <!-- Article Item -->
+            <div class="article-card" data-article-id="3">
+                <div class="article-banner">
+                    <img src="images/images0003.jpg" alt="Article 3 Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">A Day at the Zoo</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月5日</span>
+                        <span class="article-source">Kids World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">动物</span>
+                        <span class="tag">冒险</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Item -->
+            <div class="article-card" data-article-id="4">
+                <div class="article-banner">
+                    <img src="images/images0004.jpg" alt="Article 4 Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">My Magic School Bus</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月5日</span>
+                        <span class="article-source">Fun Learning</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">故事</span>
+                        <span class="tag">学校</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 4) -->
+            <div class="article-card" data-article-id="5">
+                <div class="article-banner">
+                    <img src="images/images0001.jpg" alt="Article 5 Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Ocean Explorers</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月4日</span>
+                        <span class="article-source">Sea World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">海洋</span>
+                        <span class="tag">探险</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 3) -->
+            <div class="article-card" data-article-id="6">
+                <div class="article-banner">
+                    <img src="images/images0002.jpg" alt="Article 6 Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Dinosaur Kingdom</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月3日</span>
+                        <span class="article-source">Dino World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">恐龙</span>
+                        <span class="tag">历史</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 3) -->
+            <div class="article-card" data-article-id="9">
+                <div class="article-banner">
+                    <img src="images/images0001.jpg" alt="Rainforest Animals Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Rainforest Animals and Plants</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月3日</span>
+                        <span class="article-source">Nature Kids</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">动物</span>
+                        <span class="tag">植物</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 3) -->
+            <div class="article-card" data-article-id="10">
+                <div class="article-banner">
+                    <img src="images/images0004.jpg" alt="Music World Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">The World of Music Instruments</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月3日</span>
+                        <span class="article-source">Music Fun</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">音乐</span>
+                        <span class="tag">乐器</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 2) -->
+            <div class="article-card" data-article-id="11">
+                <div class="article-banner">
+                    <img src="images/images0001.jpg" alt="Butterfly Garden Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">The Magical Butterfly Garden</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月2日</span>
+                        <span class="article-source">Nature World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">昆虫</span>
+                        <span class="tag">花园</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 2) -->
+            <div class="article-card" data-article-id="12">
+                <div class="article-banner">
+                    <img src="images/images0002.jpg" alt="Fairy Tales Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Classic Fairy Tales Retold</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月2日</span>
+                        <span class="article-source">Story Time</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">故事</span>
+                        <span class="tag">童话</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 2) -->
+            <div class="article-card" data-article-id="13">
+                <div class="article-banner">
+                    <img src="images/images0003.jpg" alt="Ocean Life Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Incredible Ocean Life</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月2日</span>
+                        <span class="article-source">Marine Life</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">海洋</span>
+                        <span class="tag">生物</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 1) -->
+            <div class="article-card" data-article-id="14">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/26A69A/FFF?text=The+Lion+King" alt="Lion King Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">The Lion King's Journey</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月1日</span>
+                        <span class="article-source">Animal Tales</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">动物</span>
+                        <span class="tag">故事</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 1) -->
+            <div class="article-card" data-article-id="15">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/FF7043/FFF?text=Weather+Science" alt="Weather Science Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Understanding Weather and Climate</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月1日</span>
+                        <span class="article-source">Science Kids</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">科学</span>
+                        <span class="tag">天气</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (March 1) -->
+            <div class="article-card" data-article-id="16">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/FF8A65/FFF?text=Art+World" alt="Art World Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Exploring the World of Art</h3>
+                    <div class="article-meta">
+                        <span class="article-date">3月1日</span>
+                        <span class="article-source">Creative Kids</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">艺术</span>
+                        <span class="tag">创意</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 29) -->
+            <div class="article-card" data-article-id="17">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/FF8A65/FFF?text=Leap+Year+Day" alt="Leap Year Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">The Magic of Leap Year Day</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月29日</span>
+                        <span class="article-source">Science World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">科学</span>
+                        <span class="tag">历史</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 29) -->
+            <div class="article-card" data-article-id="18">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/9CCC65/FFF?text=Frog+Day" alt="Frog Day Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Leap Year Frogs Special</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月29日</span>
+                        <span class="article-source">Animal Fun</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">动物</span>
+                        <span class="tag">自然</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 29) -->
+            <div class="article-card" data-article-id="19">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/4DD0E1/FFF?text=World+Facts" alt="World Facts Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Amazing Facts About Our World</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月29日</span>
+                        <span class="article-source">Knowledge Hub</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">知识</span>
+                        <span class="tag">地理</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 28) -->
+            <div class="article-card" data-article-id="20">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/FDD835/FFF?text=Honey+Bees" alt="Honey Bees Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">The Amazing World of Honey Bees</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月28日</span>
+                        <span class="article-source">Bug World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">昆虫</span>
+                        <span class="tag">自然</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 28) -->
+            <div class="article-card" data-article-id="21">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/7986CB/FFF?text=Ancient+Pyramids" alt="Pyramids Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Ancient Pyramids of Egypt</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月28日</span>
+                        <span class="article-source">History Kids</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">历史</span>
+                        <span class="tag">建筑</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 28) -->
+            <div class="article-card" data-article-id="22">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/4FC3F7/FFF?text=Water+Cycle" alt="Water Cycle Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Understanding the Water Cycle</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月28日</span>
+                        <span class="article-source">Science Today</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">科学</span>
+                        <span class="tag">自然</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 27) -->
+            <div class="article-card" data-article-id="23">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/81C784/FFF?text=Plants+Life" alt="Plants Life Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">How Plants Grow from Seeds</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月27日</span>
+                        <span class="article-source">Green World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">植物</span>
+                        <span class="tag">科学</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 27) -->
+            <div class="article-card" data-article-id="24">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/CE93D8/FFF?text=Space+Journey" alt="Space Journey Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Journey Through Our Solar System</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月27日</span>
+                        <span class="article-source">Space Kids</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">太空</span>
+                        <span class="tag">行星</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 27) -->
+            <div class="article-card" data-article-id="25">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/4DB6AC/FFF?text=Ocean+Creatures" alt="Ocean Creatures Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Amazing Ocean Creatures</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月27日</span>
+                        <span class="article-source">Ocean World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">海洋</span>
+                        <span class="tag">生物</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 26) -->
+            <div class="article-card" data-article-id="26">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/FFB74D/FFF?text=Healthy+Food" alt="Healthy Food Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Healthy Foods for Growing Kids</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月26日</span>
+                        <span class="article-source">Kids Health</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">健康</span>
+                        <span class="tag">食物</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 26) -->
+            <div class="article-card" data-article-id="27">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/64B5F6/FFF?text=Train+Adventures" alt="Train Adventures Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">The Big Train Adventure</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月26日</span>
+                        <span class="article-source">Travel Kids</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">旅行</span>
+                        <span class="tag">交通</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 26) -->
+            <div class="article-card" data-article-id="28">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/AED581/FFF?text=Bird+Watching" alt="Bird Watching Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Fun with Bird Watching</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月26日</span>
+                        <span class="article-source">Bird World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">鸟类</span>
+                        <span class="tag">自然</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 25) -->
+            <div class="article-card" data-article-id="29">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/F06292/FFF?text=Ballet+Stories" alt="Ballet Stories Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">The Magic of Ballet</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月25日</span>
+                        <span class="article-source">Dance World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">舞蹈</span>
+                        <span class="tag">艺术</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 25) -->
+            <div class="article-card" data-article-id="30">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/7E57C2/FFF?text=Numbers+Fun" alt="Numbers Fun Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Fun with Numbers and Counting</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月25日</span>
+                        <span class="article-source">Math Fun</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">数学</span>
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 25) -->
+            <div class="article-card" data-article-id="31">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/4CAF50/FFF?text=Recycling+Fun" alt="Recycling Fun Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Recycling and Protecting Our Planet</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月25日</span>
+                        <span class="article-source">Green Kids</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">环保</span>
+                        <span class="tag">地球</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 24) -->
+            <div class="article-card" data-article-id="32">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/FFA726/FFF?text=Solar+System" alt="Solar System Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Our Amazing Solar System</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月24日</span>
+                        <span class="article-source">Space Kids</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">太空</span>
+                        <span class="tag">科学</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 24) -->
+            <div class="article-card" data-article-id="33">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/FF8A65/FFF?text=Cooking+Fun" alt="Cooking Fun Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Easy Recipes for Kids</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月24日</span>
+                        <span class="article-source">Little Chef</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">食谱</span>
+                        <span class="tag">烹饪</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 24) -->
+            <div class="article-card" data-article-id="34">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/BA68C8/FFF?text=Fairy+Tales" alt="Fairy Tales Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Classic Fairy Tales Around the World</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月24日</span>
+                        <span class="article-source">Story World</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">故事</span>
+                        <span class="tag">文化</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article Item (February 24) -->
+            <div class="article-card" data-article-id="35">
+                <div class="article-banner">
+                    <img src="https://placehold.co/600x400/66BB6A/FFF?text=Gardening+Kids" alt="Gardening Kids Banner">
+                </div>
+                <div class="article-info">
+                    <h3 class="article-title">Starting Your First Garden</h3>
+                    <div class="article-meta">
+                        <span class="article-date">2月24日</span>
+                        <span class="article-source">Garden Time</span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">园艺</span>
+                        <span class="tag">植物</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <i class="fas fa-book-open"></i>
+            <span>文章</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KidsABC - 成绩统计</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="article-header">
+        <a href="index.html?today=true" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1 class="header-title">成绩统计</h1>
+    </header>
+
+    <!-- Score Container -->
+    <div class="content-container" id="score-container">
+        <div class="score-section">
+            <div class="score-circle">
+                <span class="score-percentage" id="scorePercentage">0%</span>
+            </div>
+            <h2 class="score-title">正确率</h2>
+            <p class="score-message">恭喜你完成了这篇文章的阅读和测验！</p>
+            <div class="score-info">
+                <div class="info-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span id="correctCount">0</span> 题正确
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-times-circle"></i>
+                    <span id="incorrectCount">0</span> 题错误
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-star"></i>
+                    <span id="totalScore">0</span> 总分
+                </div>
+            </div>
+            <div class="more-info">
+                <p>更多功能还在开发中</p>
+            </div>
+            <div class="action-buttons">
+                <a href="index.html?today=true" class="primary-button">
+                    <i class="fas fa-home"></i>
+                    返回首页
+                </a>
+                <a href="article-detail-fixed.html?section=quiz" class="secondary-button">
+                    <i class="fas fa-redo"></i>
+                    再试一次
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 从localStorage获取成绩数据
+            const quizResults = JSON.parse(localStorage.getItem('quizResults') || '{}');
+            const correctCount = quizResults.correctCount || 0;
+            const totalQuestions = quizResults.totalQuestions || 3;
+            const percentage = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+            
+            // 更新UI
+            document.getElementById('scorePercentage').textContent = percentage + '%';
+            document.getElementById('correctCount').textContent = correctCount;
+            document.getElementById('incorrectCount').textContent = totalQuestions - correctCount;
+            document.getElementById('totalScore').textContent = correctCount * 10;
+            
+            // 根据成绩调整圆环颜色
+            const scoreCircle = document.querySelector('.score-circle');
+            if (percentage >= 80) {
+                scoreCircle.classList.add('excellent');
+            } else if (percentage >= 60) {
+                scoreCircle.classList.add('good');
+            } else {
+                scoreCircle.classList.add('needs-improvement');
+            }
+        });
+    </script>
+</body>
+</html>

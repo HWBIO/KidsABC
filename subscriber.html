@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KidsABC - 开通会员</title>
+    <meta name="description" content="KidsABC 儿童英语阅读学习平台会员服务介绍">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="article-header">
+        <a href="profile.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1 class="header-title">开通会员</h1>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="content-container" id="subscriber-container">
+        <!-- Hero Section -->
+        <div class="subscriber-hero" style="background: linear-gradient(135deg, #4caf50, #2196f3); padding: 1.5rem 1rem;">
+            <h2>精选国外外刊时文</h2>
+            <p>我们精选考试同源外刊，相似内容主题，提前积累专业词汇量</p>
+        </div>
+        
+        <div class="cognition-section">
+            <h3>认知水平与英语能力双螺旋上升</h3>
+            <div class="cognition-content">
+                <div class="cognition-item">
+                    <div class="cognition-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="cognition-text">
+                        <h4>认知分级</h4>
+                        <p>儿童版：精选适合儿童的新闻内容，让孩子成为孩子最好的老师</p>
+                        <p>少年版：引入更多政经社科内容，引导孩子发现社会运转背后的逻辑</p>
+                    </div>
+                </div>
+                <div class="cognition-item">
+                    <div class="cognition-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="cognition-text">
+                        <h4>英语分级</h4>
+                        <p>KidsABC创造新闻分级，让不同英语水平的学生都能找到适合的阅读材料</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 会员选择Tab -->
+        <div class="membership-tabs">
+            <div class="tab-nav">
+                <div class="tab-item" data-target="monthly">
+                    月度会员
+                </div>
+                <div class="tab-item active" data-target="yearly">
+                    年度会员
+                </div>
+            </div>
+            
+            <div class="tab-content">
+                <!-- 月度会员 -->
+                <div class="tab-pane" id="monthly-pane">
+                    <div class="price-card">
+                        <div class="card-header">
+                            <h3>月度会员</h3>
+                            <div class="price">
+                                <span class="currency">¥</span>
+                                <span class="amount">99</span>
+                                <span class="period">/月</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> 无限阅读全部文章</li>
+                                <li><i class="fas fa-check"></i> 解锁所有互动测验</li>
+                                <li><i class="fas fa-check"></i> 个性化学习路径</li>
+                                <li><i class="fas fa-check"></i> 高级语音朗读功能</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 年度会员 -->
+                <div class="tab-pane active" id="yearly-pane">
+                    <div class="price-card featured">
+                        <div class="card-header">
+                            <div class="best-value">最佳选择</div>
+                            <h3>年度会员</h3>
+                            <div class="price">
+                                <span class="currency">¥</span>
+                                <span class="amount">299</span>
+                                <span class="period">/年</span>
+                            </div>
+                            <div class="saving">省¥889，相当于¥24.9/月</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> 无限阅读全部文章</li>
+                                <li><i class="fas fa-check"></i> 解锁所有互动测验</li>
+                                <li><i class="fas fa-check"></i> 个性化学习路径</li>
+                                <li><i class="fas fa-check"></i> 高级语音朗读功能</li>
+                                <li><i class="fas fa-check"></i> 定制化学习报告</li>
+                                <li><i class="fas fa-check"></i> 专属会员礼包</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 全局工具栏 -->
+        <div class="payment-toolbar">
+            <button class="payment-btn" id="paymentButton">立即支付 299元</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 会员类型切换
+            const tabItems = document.querySelectorAll('.tab-item');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            const paymentButton = document.getElementById('paymentButton');
+            
+            // 设置默认支付金额
+            let currentPrice = '299元';
+            paymentButton.textContent = `立即支付 ${currentPrice}`;
+            
+            tabItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // 移除所有激活状态
+                    tabItems.forEach(tab => tab.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // 添加当前项的激活状态
+                    this.classList.add('active');
+                    
+                    // 显示对应的内容
+                    const target = this.getAttribute('data-target');
+                    document.getElementById(`${target}-pane`).classList.add('active');
+                    
+                    // 更新支付按钮金额
+                    if (target === 'monthly') {
+                        currentPrice = '99元';
+                    } else {
+                        currentPrice = '299元';
+                    }
+                    
+                    paymentButton.textContent = `立即支付 ${currentPrice}`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
