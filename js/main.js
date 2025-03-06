@@ -212,9 +212,54 @@ function initArticleDetailPage() {
     // 初始化文章详情页的标签页切换
     initArticleDetailTabs();
     
-    // 检查URL中是否有section参数，如果有则自动切换到相应的标签页
+    // 获取URL参数
     const urlParams = new URLSearchParams(window.location.search);
     const sectionParam = urlParams.get('section');
+    const articleId = urlParams.get('id') || '1'; // 默认为1
+    
+    // 定义文章标题映射
+    const articleTitles = {
+        '1': "The Little Red Hen's Adventure",
+        '2': "The Solar System Adventure",
+        '3': "A Day at the Zoo",
+        '4': "My Magic School Bus",
+        '5': "Ocean Explorers",
+        '6': "Dinosaur Kingdom",
+        '9': "Rainforest Animals and Plants",
+        '10': "Music World"
+    };
+    
+    // 根据文章ID设置正确的图片和标题
+    const articleBannerImg = document.querySelector('.article-banner img');
+    const articleTitle = document.querySelector('.article-overlay-title');
+    
+    if (articleBannerImg) {
+        // 设置图片路径，使用文章ID对应的图片
+        let imageNumber = parseInt(articleId);
+        if (isNaN(imageNumber) || imageNumber < 1) {
+            imageNumber = 1;
+        } else if (imageNumber > 4) {
+            // 我们假设只有1-4的图片，其余的循环使用
+            imageNumber = ((imageNumber - 1) % 4) + 1;
+        }
+        
+        const imagePath = `images/images000${imageNumber}.jpg`;
+        articleBannerImg.src = imagePath;
+        articleBannerImg.setAttribute('data-article-id', articleId);
+        
+        // 更新图片alt属性
+        const altText = articleTitles[articleId] || "Article Image";
+        articleBannerImg.alt = altText;
+        
+        console.log(`Article ID: ${articleId}, Loading image: ${imagePath}`);
+    }
+    
+    // 更新文章标题
+    if (articleTitle && articleTitles[articleId]) {
+        articleTitle.textContent = articleTitles[articleId];
+    }
+    
+    // 检查URL中是否有section参数，如果有则自动切换到相应的标签页
     if (sectionParam) {
         // 获取对应的导航菜单项
         const targetNavItem = document.querySelector(`.sub-nav-item[data-target="${sectionParam}"]`);
